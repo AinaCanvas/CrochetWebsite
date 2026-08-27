@@ -1,0 +1,41 @@
+.wa-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #C8A2C8;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.75rem 1.2rem 0.75rem 1rem;
+  box-shadow: 0 4px 24px rgba(200,162,200,0.4);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition), padding var(--transition);
+  overflow: hidden;
+  max-width: 200px;
+}
+
+.wa-fab:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(200,162,200,0.5);
+}
+
+.wa-fab__label {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .wa-fab {
+    padding: 0.85rem;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    justify-content: center;
+  }
+
+  .wa-fab__label { display: none; }
+}

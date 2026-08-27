@@ -1,0 +1,87 @@
+.footer {
+  background: var(--plum-dark);
+  color: rgba(255,255,255,0.85);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3.5rem 1.25rem 2.5rem;
+}
+
+/* Brand */
+.footer__tagline {
+  font-family: var(--font-script);
+  font-size: 1.1rem;
+  color: var(--lilac);
+  margin: 0.75rem 0 0.4rem;
+}
+
+.footer__made {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Nav */
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__nav-title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.footer__nav a,
+.footer__contact-link {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  transition: color var(--transition);
+}
+
+.footer__nav a:hover,
+.footer__contact-link:hover {
+  color: var(--lavender-pink);
+}
+
+/* Contact */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+/* Bottom bar */
+.footer__bottom {
+  background: rgba(0,0,0,0.2);
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+}
+
+.footer__bottom p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+}
+
+@media (max-width: 720px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+}

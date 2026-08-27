@@ -1,0 +1,201 @@
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.product-card--visible {
+  animation: fadeInUp 0.55s ease calc(var(--delay, 0ms)) both;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(91,58,93,0.14);
+}
+
+/* Image */
+.product-card__img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--lavender-pink);
+  cursor: zoom-in;
+}
+
+.product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card__img {
+  transform: scale(1.04);
+}
+
+/* Zoom hint overlay — visible on hover */
+.product-card__zoom-hint {
+  position: absolute;
+  inset: 0;
+  background: rgba(62, 35, 64, 0.45);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.product-card__img-wrap:hover .product-card__zoom-hint {
+  opacity: 1;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--gold);
+  color: var(--plum-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+}
+
+.product-card__category {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(253,247,250,0.92);
+  color: var(--plum-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 50px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Carousel arrows */
+.product-card__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  color: var(--plum);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+  z-index: 2;
+  line-height: 1;
+  cursor: pointer;
+}
+.product-card__arrow--left { left: 8px; }
+.product-card__arrow--right { right: 8px; }
+.product-card__img-wrap:hover .product-card__arrow { opacity: 1; }
+.product-card__arrow:hover { background: var(--lilac); color: #fff; }
+
+/* Carousel dots */
+.product-card__dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.5rem 0 0;
+}
+.product-card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: var(--lavender-pink);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.product-card__dot--active {
+  background: var(--lilac);
+  transform: scale(1.3);
+}
+
+/* Body */
+.product-card__body {
+  padding: 1.2rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.55rem;
+}
+
+.product-card__name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--plum-dark);
+  line-height: 1.3;
+}
+
+.product-card__desc {
+  font-size: 0.84rem;
+  color: var(--plum-light);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Footer */
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--lavender-pink);
+}
+
+.product-card__price {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--plum-dark);
+}
+
+.product-card__wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #C8A2C8;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  box-shadow: 0 2px 8px rgba(200,162,200,0.35);
+}
+
+.product-card__wa-btn:hover {
+  background: #b088b0;
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(200,162,200,0.5);
+}
