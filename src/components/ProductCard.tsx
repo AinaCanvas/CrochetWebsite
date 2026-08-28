@@ -131,6 +131,9 @@ export default function ProductCard({ product, animationDelay = 0 }: ProductCard
         <Lightbox
           src={images[currentImg]}
           alt={product.name}
+          images={images}
+          index={currentImg}
+          onNavigate={setCurrentImg}
           onClose={() => setLightboxOpen(false)}
         />
       )}

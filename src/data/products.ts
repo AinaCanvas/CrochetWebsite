@@ -54,6 +54,12 @@ import imgBagCharm from '../assets/Bag charm.png'
 import imgParanda from '../assets/Paranda.png'
 import imgParanda2 from '../assets/Paranda (2).png'
 import imgParanda3 from '../assets/Paranda (3).png'
+import imgRose58 from '../assets/58.png'
+import imgRose59 from '../assets/59.png'
+import imgRose60 from '../assets/60.png'
+import imgRose61 from '../assets/61.png'
+import imgRose62 from '../assets/62.png'
+import imgRose64 from '../assets/64.png'
 
 export type Category = 'Amigurumi' | 'Flowers' | 'Bags' | 'Keychains' | 'Home Decor' | 'Accessories';
 
@@ -71,14 +77,14 @@ export interface Product {
 }
 
 export const PRODUCTS: Product[] = [
-  // ── Amigurumi ──
+  // ── Flowers ──
   {
     id: 'p1',
-    name: 'Sunflower Amigurumi Bear',
+    name: 'Sunflower',
     price: 950,
     sizes: ['Small (15 cm)', 'Medium (22 cm)', 'Large (30 cm)'],
     description: 'A cuddly crocheted teddy bear with a tiny sunflower crown. Perfect as a gift or keepsake.',
-    category: 'Amigurumi',
+    category: 'Flowers',
     customizable: true,
     featured: true,
     image: imgSunflower,
@@ -112,8 +118,8 @@ export const PRODUCTS: Product[] = [
   // ── Flowers ──
   {
     id: 'p4',
-    name: 'Bloom Bouquet — Mixed Florals',
-    price: 1200,
+    name: 'Rose Bouquet',
+    price: 4500,
     sizes: ['Mini (3 stems)', 'Standard (6 stems)', 'Bouquet (12 stems)'],
     description: 'Eternal crochet flowers in your choice of colours — roses, tulips, and daisies hand-stitched to last forever.',
     category: 'Flowers',
@@ -132,7 +138,7 @@ export const PRODUCTS: Product[] = [
     customizable: true,
     featured: true,
     image: imgRose,
-    images: [imgRose, imgRose2, imgRose3],
+    images: [imgRose, imgRose2, imgRose3, imgRose58, imgRose59, imgRose60, imgRose61, imgRose62, imgRose64],
   },
   {
     id: 'p6',
@@ -140,7 +146,7 @@ export const PRODUCTS: Product[] = [
     price: 1200,
     sizes: ['Small', 'Medium'],
     description: 'A charming crochet rose planted in a tiny pot — a everlasting desk or shelf accent.',
-    category: 'Flowers',
+    category: 'Home Decor',
     customizable: true,
     featured: false,
     image: imgRosePot,
@@ -148,7 +154,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p7',
-    name: 'Tulip Bouquet',
+    name: 'Tulip',
     price: 750,
     sizes: ['Mini (3 stems)', 'Standard (6 stems)'],
     description: 'A cheerful bunch of crochet tulips in your favourite colour palette.',
@@ -156,7 +162,7 @@ export const PRODUCTS: Product[] = [
     customizable: true,
     featured: true,
     image: imgTulip,
-    images: [imgTulip, imgTulip2, imgTulip3, imgTulip4, imgTulip5],
+    images: [imgTulip3, imgTulip4, imgTulip5],
   },
   {
     id: 'p8',
@@ -171,28 +177,28 @@ export const PRODUCTS: Product[] = [
     images: [imgLavender],
   },
   {
-    id: 'p9',
-    name: 'Lily of the Valley',
-    price: 800,
-    sizes: ['Single Stem', 'Set of 3'],
-    description: 'Dainty crochet lily of the valley — a timeless, elegant floral keepsake.',
-    category: 'Flowers',
-    customizable: true,
-    featured: false,
-    image: imgLilyValley,
-    images: [imgLilyValley],
-  },
-  {
     id: 'p10',
     name: 'Succulent in a Pot',
     price: 1200,
     sizes: ['Small', 'Medium'],
     description: 'A low-maintenance crochet succulent that stays green forever. Perfect for desks and shelves.',
-    category: 'Flowers',
+    category: 'Home Decor',
     customizable: true,
     featured: false,
     image: imgSucculentPot,
     images: [imgSucculentPot, imgSucculentPot2],
+  },
+  {
+    id: 'p31',
+    name: 'Tulip Bouquet',
+    price: 2250,
+    sizes: ['Set of 4', 'Set of 6'],
+    description: 'Thick, absorbent crochet coasters in coordinated pastel hues. Protect your table in style.',
+    category: 'Flowers',
+    customizable: false,
+    featured: false,
+    image: imgTulips,
+    images: [imgTulips],
   },
 
   // ── Bags ──
@@ -255,8 +261,8 @@ export const PRODUCTS: Product[] = [
     category: 'Keychains',
     customizable: true,
     featured: false,
-    image: imgLilyValleyKeychain,
-    images: [imgLilyValleyKeychain, imgLilyValleyKeychain2, imgLilyValleyKeychain3],
+    image: imgLilyValley,
+    images: [imgLilyValley, imgLilyValleyKeychain, imgLilyValleyKeychain2, imgLilyValleyKeychain3],
   },
   {
     id: 'p16',
@@ -374,7 +380,7 @@ export const PRODUCTS: Product[] = [
     price: 500,
     sizes: ['One Size (~5 cm)'],
     description: 'A dainty crochet butterfly charm — attach it to your bag, keys, or use as a decoration.',
-    category: 'Accessories',
+    category: 'Keychains',
     customizable: true,
     featured: false,
     image: imgButterflyCharm,
@@ -422,7 +428,7 @@ export const PRODUCTS: Product[] = [
     price: 700,
     sizes: ['One Size'],
     description: 'A playful crochet charm to personalise your bag or purse.',
-    category: 'Accessories',
+    category: 'Bags',
     customizable: true,
     featured: false,
     image: imgBagCharm,
@@ -440,34 +446,7 @@ export const PRODUCTS: Product[] = [
     image: imgParanda,
     images: [imgParanda, imgParanda2, imgParanda3],
   },
-
-  // ── Home Decor ──
-  {
-    id: 'p31',
-    name: 'Cosy Home Coaster Set',
-    price: 950,
-    sizes: ['Set of 4', 'Set of 6'],
-    description: 'Thick, absorbent crochet coasters in coordinated pastel hues. Protect your table in style.',
-    category: 'Home Decor',
-    customizable: false,
-    featured: false,
-    image: imgTulips,
-    images: [imgTulips],
-  },
-  {
-    id: 'p32',
-    name: 'Enchanted Lily Wall Hanging',
-    price: 3200,
-    sizes: ['Small (30 cm)', 'Large (60 cm)'],
-    description: 'Bohemian wall art with cascading crochet lilies and macramé knots — a dreamy centrepiece for any room.',
-    category: 'Home Decor',
-    customizable: true,
-    featured: false,
-    image: imgLilyValley,
-    images: [imgLilyValley],
-  },
 ];
-
 export const CATEGORIES: Category[] = ['Amigurumi', 'Flowers', 'Bags', 'Keychains', 'Home Decor', 'Accessories'];
 
 export const WHATSAPP_NUMBER = '923284396241';

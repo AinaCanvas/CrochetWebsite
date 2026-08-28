@@ -5,23 +5,32 @@ interface LightboxProps {
   src: string
   alt: string
   onClose: () => void
+  images?: string[]
+  index?: number
+  onNavigate?: (index: number) => void
 }
 
-export default function Lightbox({ src, alt, onClose }: LightboxProps) {
+export default function Lightbox({ src, alt, onClose, images = [], index = 0, onNavigate }: LightboxProps) {
   const [scale, setScale] = useState(1)
   const [zoomed, setZoomed] = useState(false)
+  const hasMultiple = images.length > 1
+
+  const goPrev = () => onNavigate?.((index - 1 + images.length) % images.length)
+  const goNext = () => onNavigate?.((index + 1) % images.length)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
+      else if (e.key === 'ArrowLeft' && hasMultiple) goPrev()
+      else if (e.key === 'ArrowRight' && hasMultiple) goNext()
     }
     window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', onKey)
     }
-  }, [onClose])
+  })
 
   const toggleZoom = () => {
     if (zoomed) {
@@ -88,6 +97,40 @@ export default function Lightbox({ src, alt, onClose }: LightboxProps) {
           </svg>
         </button>
       </div>
+
+      {/* Prev / Next navigation */}
+      {hasMultiple && (
+        <>
+          <button
+            className="lightbox__nav lightbox__nav--prev"
+            onClick={goPrev}
+            aria-label="Previous image"
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button
+            className="lightbox__nav lightbox__nav--next"
+            onClick={goNext}
+            aria-label="Next image"
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+          <div className="lightbox__dots">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                className={`lightbox__dot${i === index ? ' lightbox__dot--active' : ''}`}
+                onClick={() => onNavigate?.(i)}
+                aria-label={`View image ${i + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   )
 }

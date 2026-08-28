@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding-top: 112px;
+  padding-top: 78px;
   min-height: 660px;
   background: linear-gradient(120deg, #FBEFF5 0%, #F6ECFA 45%, #FDF3E4 100%);
   display: flex;
@@ -11,7 +11,7 @@
 /* Full-bleed background image, edge to edge, sits below navbar */
 .hero__media {
   position: absolute;
-  top: 112px;
+  top: 78px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -201,11 +201,11 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding-top: 80px;
+    padding-top: 78px;
     min-height: 0;
   }
   .hero__media {
-    top: 80px;
+    top: 78px;
     position: absolute;
   }
   .hero__media-img {
