@@ -1,5 +1,7 @@
+import imgRose from '../assets/Rose.png'
+import imgMrFrog from '../assets/Mr. Frogenton.png'
 import { WHATSAPP_NUMBER } from '../data/products'
-import { IconYarnHeart, IconFlower, IconSparkle, IconPalette, IconRuler, IconGift, IconChatBubble } from './SiteIcons'
+import { IconYarnHeart, IconFlower, IconSparkle, IconHeart, IconPalette, IconRuler, IconGift, IconChatBubble } from './SiteIcons'
 import './CustomOrdersBanner.css'
 
 export default function CustomOrdersBanner() {
@@ -7,10 +9,24 @@ export default function CustomOrdersBanner() {
 
   return (
     <section id="custom-orders" className="custom-banner" aria-labelledby="custom-title">
-      {/* Decorative doodles */}
-      <span className="custom-banner__doodle custom-banner__doodle--a" aria-hidden="true"><IconYarnHeart size={40} /></span>
-      <span className="custom-banner__doodle custom-banner__doodle--b" aria-hidden="true"><IconFlower size={36} /></span>
-      <span className="custom-banner__doodle custom-banner__doodle--c" aria-hidden="true"><IconSparkle size={28} /></span>
+      {/* Faint oversized stitch motif across the whole panel */}
+      <div className="custom-banner__motif" aria-hidden="true" />
+
+      {/* Partially cropped product photos at the edges */}
+      <span className="custom-banner__photo custom-banner__photo--left" aria-hidden="true">
+        <img src={imgRose} alt="" loading="lazy" />
+      </span>
+      <span className="custom-banner__photo custom-banner__photo--right" aria-hidden="true">
+        <img src={imgMrFrog} alt="" loading="lazy" />
+      </span>
+
+      {/* Delicate line-art decorations on both sides */}
+      <span className="custom-banner__doodle custom-banner__doodle--a" aria-hidden="true"><IconYarnHeart size={42} /></span>
+      <span className="custom-banner__doodle custom-banner__doodle--b" aria-hidden="true"><IconFlower size={38} /></span>
+      <span className="custom-banner__doodle custom-banner__doodle--c" aria-hidden="true"><IconSparkle size={30} /></span>
+      <span className="custom-banner__doodle custom-banner__doodle--d" aria-hidden="true"><IconHeart size={34} /></span>
+      <span className="custom-banner__doodle custom-banner__doodle--e" aria-hidden="true"><IconSparkle size={22} /></span>
+      <span className="custom-banner__doodle custom-banner__doodle--f" aria-hidden="true"><IconYarnHeart size={34} /></span>
 
       <div className="container custom-banner__content">
         <span className="custom-banner__eyebrow">Special Requests</span>
@@ -23,11 +39,12 @@ export default function CustomOrdersBanner() {
           a wedding favour set, or a plushie of your favourite character,
           we'd love to bring your vision to life.
         </p>
+        <span className="custom-banner__sig">Made around your idea, stitch by stitch.</span>
         <ul className="custom-banner__perks">
-          <li><IconPalette size={18} /> Any colour combination</li>
-          <li><IconRuler size={18} /> Custom sizes available</li>
-          <li><IconGift size={18} /> Perfect for gifts & events</li>
-          <li><IconChatBubble size={18} /> Personal chat support throughout</li>
+          <li><IconPalette size={16} /> Any colour combination</li>
+          <li><IconRuler size={16} /> Custom sizes available</li>
+          <li><IconGift size={16} /> Perfect for gifts & events</li>
+          <li><IconChatBubble size={16} /> Personal chat support throughout</li>
         </ul>
         <a
           href={waLink}

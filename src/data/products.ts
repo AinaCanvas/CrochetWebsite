@@ -388,7 +388,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p26',
-    name: 'Butterfly Hair Top',
+    name: 'Butterfly Top',
     price: 2500,
     sizes: ['One Size'],
     description: 'A beautiful crochet butterfly hair accessory — handmade and unique.',

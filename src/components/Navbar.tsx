@@ -28,10 +28,10 @@ export default function Navbar() {
         <Link to="/" className="navbar__logo" aria-label="Lilly & Looms – Home" onClick={closeMenu}>
           <img
             alt="Lily & Looms"
-            width={64}
-            height={64}
+            width={76}
+            height={76}
             src="/logo.png"
-            style={{ width: 64, height: 64, objectFit: 'contain', display: 'block' }}
+            style={{ width: 76, height: 76, objectFit: 'contain', display: 'block' }}
           />
         </Link>
 

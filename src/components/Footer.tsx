@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container footer__inner">
         {/* Brand */}
         <div className="footer__brand">
-          <Link to="/"><Logo size={50} /></Link>
+          <Link to="/"><Logo size={76} /></Link>
           <p className="footer__tagline">Every stitch tells a special story.</p>
           <p className="footer__made">Handmade with love in Pakistan 🇵🇰</p>
         </div>
