@@ -24,22 +24,21 @@ export default function AboutSection() {
             <em>every single stitch</em>
           </h2>
           <p>
-            Lily &amp; Looms was born from a quiet afternoon, a crochet hook,
-            and a handful of colourful yarn. What began as a personal passion
-            for handcraft grew into a small business rooted in the belief that
-            truly special things are made — not manufactured.
+            It started with a forgotten ball of yarn. Years after my sister
+            first tried teaching me crochet, I picked up the hook again to make
+            a handmade birthday gift for my best friend — and never really put
+            it down.
           </p>
           <p>
-            Every piece that leaves our hands carries hours of care, intention,
-            and the kind of warmth that only a handmade gift can carry.
-            From cuddly amigurumi creatures to everlasting yarn flowers,
-            we stitch stories that you can hold.
+            That first little puff-flower keychain grew into Lily &amp; Looms:
+            a little world of handmade creations where someone's idea becomes
+            something they can actually hold.
           </p>
           <p>
-            Based in Pakistan, we are proud to keep traditional craft alive
-            while making it accessible for gift-givers and collectors around
-            the world. We believe every order is a conversation — and we can't
-            wait to hear yours.
+            The name itself carries the journey — "Lily" is the alias I've
+            always used, and "Looms" is a nod to my old loom-band days. In a
+            way, I went from a hook and a box of rubber bands to a hook and a
+            ball of yarn.
           </p>
           <a href="#custom-orders" className="btn btn-primary about-section__cta">
             Start a Custom Order

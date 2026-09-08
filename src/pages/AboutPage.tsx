@@ -42,25 +42,50 @@ export default function AboutPage() {
 
             <div className="about-page__text-col">
               <span className="about-page__script">How it began</span>
-              <h2 className="about-page__heading">One hook, a handful of yarn, and a dream</h2>
+              <h2 className="about-page__heading">It started with a forgotten ball of yarn.</h2>
               <p>
-                Lily &amp; Looms was born from a quiet afternoon, a crochet hook,
-                and a handful of colourful yarn. What began as a personal passion
-                for handcraft slowly grew into something much bigger — a small
-                business rooted in the belief that truly special things are made,
-                not manufactured.
+                My first encounter with crochet was years ago, watching my sister
+                learn from my nani jan. I wasn't particularly serious about it
+                then — I only learned the basic chain and eventually forgot all
+                about it.
               </p>
               <p>
-                Every piece that leaves our hands carries hours of care, intention,
-                and the kind of warmth that only a handmade gift can hold.
-                From cuddly amigurumi creatures to everlasting yarn bouquets,
-                we stitch stories you can keep forever.
+                Years later, while looking for a handmade birthday gift for my
+                best friend, I suddenly remembered an old ball of yarn and a
+                crochet hook tucked away in a trunk in our storeroom. So I
+                thought, <em>why not learn crochet and make her something?</em>
               </p>
               <p>
-                Based in Pakistan, we are proud to keep traditional fibre craft
-                alive while making it accessible and gifted worldwide.
-                We believe every order is a conversation — and we can't wait to
-                hear yours.
+                I turned to online video tutorials, taught myself the basic
+                stitches, and somehow went from struggling with the basics to
+                learning magic rings and making a little puff-flower keychain
+                for her. It turned out pretty good, and seeing how happy she was
+                made me want to keep creating.
+              </p>
+              <p>
+                What started as one handmade gift slowly became something I
+                genuinely fell in love with. I began making pieces for friends
+                and family, and eventually, their encouragement gave me the push
+                to start selling.
+              </p>
+              <p>
+                Even the name Lily &amp; Looms carries a little piece of that
+                journey. "Lily" is the alias I've always used, while "Looms" is
+                a nod to my old loom-band days, when I used to make bracelets
+                from tiny rubber bands. In a way, I went from a hook and a box
+                of rubber bands to a hook and a ball of yarn.
+              </p>
+              <p>
+                Today, Lily &amp; Looms is my little world of handmade
+                creations, where I get to turn someone's idea into something
+                they can actually hold. Every piece is made with thought, time,
+                and love, because no two handmade pieces are ever exactly the
+                same.
+              </p>
+              <p>
+                And I hope that when you receive one, you think,
+                <em> "This is exactly what I had in mind."</em> Or, if I'm
+                lucky, <em>"It's even better."</em>
               </p>
             </div>
           </div>
