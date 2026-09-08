@@ -1,5 +1,5 @@
-import imgRose from '../assets/Rose.png'
-import imgMrFrog from '../assets/Mr. Frogenton.png'
+import imgChatgpt1 from '../assets/ChatGPT Image Sep 7, 2026, 09_44_39 PM.png'
+import imgChatgpt2 from '../assets/ChatGPT Image Sep 7, 2026, 09_45_35 PM.png'
 import { WHATSAPP_NUMBER } from '../data/products'
 import { IconYarnHeart, IconFlower, IconSparkle, IconHeart, IconPalette, IconRuler, IconGift, IconChatBubble } from './SiteIcons'
 import './CustomOrdersBanner.css'
@@ -14,10 +14,10 @@ export default function CustomOrdersBanner() {
 
       {/* Partially cropped product photos at the edges */}
       <span className="custom-banner__photo custom-banner__photo--left" aria-hidden="true">
-        <img src={imgRose} alt="" loading="lazy" />
+        <img src={imgChatgpt1} alt="" loading="lazy" />
       </span>
       <span className="custom-banner__photo custom-banner__photo--right" aria-hidden="true">
-        <img src={imgMrFrog} alt="" loading="lazy" />
+        <img src={imgChatgpt2} alt="" loading="lazy" />
       </span>
 
       {/* Delicate line-art decorations on both sides */}
