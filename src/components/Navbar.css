@@ -127,6 +127,10 @@
 }
 
 @media (max-width: 768px) {
+  .navbar__inner {
+    height: 72px;
+  }
+
   .navbar__hamburger { display: flex; }
 
   .navbar__nav {
@@ -153,6 +157,11 @@
   }
 
   .navbar__logo-subtitle { display: none; }
+
+  .navbar__logo img {
+    width: 52px !important;
+    height: 52px !important;
+  }
 
   .navbar__backdrop {
     display: block;
